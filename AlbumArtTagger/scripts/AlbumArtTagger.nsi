@@ -8,7 +8,7 @@
 Name "${APPNAMEANDVERSION}"
 InstallDir "$PROGRAMFILES\iTunesAlbumArtTagger"
 InstallDirRegKey HKLM "Software\${APPNAME}" ""
-OutFile "D:\Projects\itunes_tag_art\AlbumArtTagger\AlbumArtTagger\AlbumArtTagger.exe"
+OutFile "..\AlbumArtTagger.exe"
 
 ; Modern interface settings
 !include "MUI.nsh"
