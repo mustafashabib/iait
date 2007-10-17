@@ -49,7 +49,13 @@ namespace AlbumArtTagger
 
             foreach (IITPlaylist currPlaylist in myItunes.LibrarySource.Playlists)
             {
+                if(!currPlaylist.Name.Equals("Music Videos") &&
+                    !currPlaylist.Name.Equals("Movies") &&
+                    !currPlaylist.Name.Equals("Podcasts") &&
+                    !currPlaylist.Name.Equals("TV Shows"))
+                {
                 _htPlaylists.Add(currPlaylist.Name, currPlaylist);
+                }
             }
             selPlaylist.DisplayMember = "key";
             selPlaylist.ValueMember = "value";
@@ -197,14 +203,14 @@ namespace AlbumArtTagger
                             {
                                 AlbumArtTagger.frmConfirm tagThisImageConfirmation = new AlbumArtTagger.frmConfirm(artURLs, currArtist, currAlbum, currTrack.Name);
                                 //tagThisImageConfirmation.Visible = false;
-                                this.Enabled = false;
+                             //   this.Enabled = false;
                                 tagThisImageConfirmation.ShowDialog();
 
                                 while (ConfirmingArt)
                                 {
                                     //wait
                                 }
-                                this.Enabled = true ;
+                              //  this.Enabled = true ;
                                 
                                 
                             }
